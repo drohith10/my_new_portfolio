@@ -23,6 +23,16 @@ window.onload = function() {
       }
     }
   });
+window.onload = function() {
+  particlesJS('particles-js', { /* config JSON here */ });
+
+  document.querySelectorAll('nav.sidebar a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+};
 
 
   // Smooth scroll for sidebar links
