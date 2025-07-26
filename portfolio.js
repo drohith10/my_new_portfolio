@@ -1,13 +1,18 @@
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+const links = document.querySelectorAll('nav ul li a');
+const sections = document.querySelectorAll('.section');
 
-function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-    }
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-}
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    links.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+    const id = link.getAttribute('href').substring(1);
+    sections.forEach(sec => {
+      sec.classList.remove('active');
+      if (sec.id === id) sec.classList.add('active');
+    });
+  });
+});
+
+// On load, show Home
+window.addEventListener('DOMContentLoaded', () => document.querySelector('#home').classList.add('active'));
