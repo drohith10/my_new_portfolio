@@ -23,9 +23,7 @@ window.onload = function() {
       }
     }
   });
-particlesJS.load('particles-js', 'particles.json', function () {
-  console.log('Particles config loaded');
-});
+
 
   // Smooth scroll for sidebar links
   const navLinks = document.querySelectorAll('nav.sidebar a');
