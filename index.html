@@ -1,145 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Rohith Daram Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/d58408c417.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rohith Daram | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<!-- HEADER -->
-<div id="header">
-  <div class="container">
+  <header>
+    <div class="logo">Rohith Daram</div>
     <nav>
-      <div class="header-text1">
-        <h1><span>ROHITH</span> DARAM</h1>
-      </div>
       <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">PROJECTS</a></li>
-        <li><a href="#">CERTIFICATIONS</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="header-text">
-      <p>Aspiring Data Analyst & Web Developer</p>
-      <h1>Hi, I'm <span>Rohith</span><br>from Hyderabad</h1>
+  </header>
+
+  <section class="tabs">
+    <div class="tab-links active-link" onclick="opentab('about')">About</div>
+    <div class="tab-links" onclick="opentab('projects')">Projects</div>
+    <div class="tab-links" onclick="opentab('education')">Education</div>
+  </section>
+
+  <section id="about" class="tab-contents active-tab">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I'm Rohith Daram, a Data Analyst and Web Developer with experience in Python, SQL, Machine Learning, and Computer Vision. I enjoy building real-world solutions, including AI models and full-stack apps.</p>
     </div>
-  </div>
-</div>
+  </section>
 
-<!-- ABOUT -->
-<div id="about">
-  <div class="container">
-    <div class="row">
-      <div class="about-col-1">
-        <img src="./IMAGES/rohith-photo.jpg" alt="Rohith's Photo">
-      </div>
-      <div class="about-col-2">
-        <h1 class="sub-title">ABOUT ME</h1>
-        <h3>
-          I'm Rohith Daram, an aspiring Data Analyst and Web Developer based in Hyderabad.
-          I’m passionate about building impactful, data-driven solutions and have experience with AI, computer vision, and full-stack development.
-          I enjoy solving real-world problems and continuously learning new technologies.
-        </h3>
-        <br>
-        <div class="tab-titles">
-          <p class="tab-links active-link" onclick="opentab('SKILLS')">SKILLS</p>
-          <p class="tab-links" onclick="opentab('PROJECTS')">PROJECTS</p>
-          <p class="tab-links" onclick="opentab('EDUCATION')">EDUCATION</p>
-          <p class="tab-links" onclick="opentab('CERTIFICATIONS')">CERTIFICATIONS</p>
-        </div>
-
-        <!-- SKILLS -->
-        <div class="tab-contents active-tab" id="SKILLS">
-          <ul>
-            <li><span>Languages</span><br>Python, Java, C, SQL</li>
-            <li><span>Web Tech</span><br>HTML, CSS, JavaScript, React.js, Node.js, REST API</li>
-            <li><span>Frameworks & Tools</span><br>Flask, Tailwind CSS, Git, Postman</li>
-            <li><span>Database</span><br>SQL, MongoDB</li>
-            <li><span>Other</span><br>AI/ML (Basic), Cybersecurity, Communication</li>
-          </ul>
-        </div>
-
-        <!-- PROJECTS -->
-        <div class="tab-contents" id="PROJECTS">
-          <ul>
-            <li><span>Deepfake Video Detection Web-App</span><br>Python, ResNeXt, LSTM, Flask, React.js</li>
-            <li><span>Gun Detection AI</span><br>Python, YOLOv5, OpenCV</li>
-            <li><span>Eye Mouse</span><br>Python, Dlib, OpenCV</li>
-            <li><span>NFC Business Card Writer</span><br>React Native, JavaScript, NFC</li>
-          </ul>
-        </div>
-
-        <!-- EDUCATION -->
-        <div class="tab-contents" id="EDUCATION">
-          <ul>
-            <li><span>B.Tech CSE (2022–2026)</span><br>Vidya Jyothi Institute of Technology — CGPA: 8.51</li>
-            <li><span>Intermediate (2020–2022)</span><br>Sri Chaitanya Junior College — 84%</li>
-            <li><span>Class 10 (2019)</span><br>DAV BDL Public School — 84.4%</li>
-          </ul>
-        </div>
-
-        <!-- CERTIFICATIONS -->
-        <div class="tab-contents" id="CERTIFICATIONS">
-          <ul>
-            <li><span>Python & C</span><br>Cisco Networking Academy (2022)</li>
-            <li><span>Java & DBMS</span><br>Oracle (2024)</li>
-            <li><span>Cybersecurity</span><br>CDAC (2024)</li>
-            <li><span>Data Analytics</span><br>Cisco Networking Academy (2025)</li>
-          </ul>
-        </div>
-      </div>
+  <section id="projects" class="tab-contents">
+    <div class="card">
+      <h2>Deepfake Detection</h2>
+      <p>Developed a CNN-based model that detects deepfake videos using frame analysis and face embeddings.</p>
     </div>
-  </div>
-</div>
-
-<!-- CONTACT -->
-<div id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="contact-left">
-        <h1 class="sub-title">CONTACT ME</h1>
-        <p><i class="fa-solid fa-paper-plane"></i> rohithdaram10@gmail.com</p>
-        <p><i class="fa-solid fa-phone"></i> +91-6303063205</p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/rohith-daram"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://github.com/drohith10"><i class="fa-brands fa-github"></i></a>
-        </div>
-        <a href="./IMAGES/Rohith_Resume.pdf" download class="btn btn2">DOWNLOAD RESUME</a>
-      </div>
-      <div class="contact-right">
-        <form>
-          <input type="text" name="Name" placeholder="YOUR NAME" required>
-          <input type="email" name="email" placeholder="YOUR MAIL" required>
-          <textarea name="Message" rows="6" placeholder="YOUR MESSAGE"></textarea>
-          <button type="submit" class="btn btn2">SUBMIT</button>
-        </form>
-      </div>
+    <div class="card">
+      <h2>Gun Detection System</h2>
+      <p>Real-time weapon detection system using YOLOv5 and OpenCV for surveillance footage analysis.</p>
     </div>
-  </div>
-  <div class="copyright">
-    <p>© Rohith Daram. All rights reserved.</p>
-  </div>
-</div>
+    <div class="card">
+      <h2>Eye-Controlled Mouse</h2>
+      <p>Built a tool that moves the cursor and clicks using only eye movement, leveraging MediaPipe and Dlib.</p>
+    </div>
+  </section>
 
-<!-- TABS SCRIPT -->
-<script>
-  var tablinks = document.getElementsByClassName("tab-links");
-  var tabcontents = document.getElementsByClassName("tab-contents");
-  function opentab(tabname){
-    for(tablink of tablinks){
-      tablink.classList.remove("active-link");
-    }
-    for(tabcontent of tabcontents){
-      tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-  }
-</script>
+  <section id="education" class="tab-contents">
+    <div class="card">
+      <h2>Computer Science Engineering</h2>
+      <p>Currently pursuing B.Tech in CSE with strong academic record and hands-on projects in AI and Web Development.</p>
+    </div>
+  </section>
 
+  <footer>
+    <p>Connect with me: 
+      <a href="https://www.linkedin.com/in/rohithdaram" target="_blank">LinkedIn</a>
+      <a href="https://github.com/rohithdaram" target="_blank">GitHub</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
