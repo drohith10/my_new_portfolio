@@ -1,65 +1,84 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rohith Daram | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">Rohith Daram</div>
+  <aside class="sidebar">
+    <div class="profile">
+      <h1>Rohith<br /><span>Daram</span></h1>
+      <p>Data Analyst & Web Developer</p>
+    </div>
     <nav>
       <ul>
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-  </header>
+    <div class="resume">
+      <a href="resume.pdf" download>Download Resume</a>
+    </div>
+    <div class="social">
+      <a href="https://linkedin.com/in/rohith-daram" target="_blank">LinkedIn</a>
+      <a href="https://github.com/drohith10" target="_blank">GitHub</a>
+    </div>
+  </aside>
 
-  <section class="tabs">
-    <div class="tab-links active-link" onclick="opentab('about')">About</div>
-    <div class="tab-links" onclick="opentab('projects')">Projects</div>
-    <div class="tab-links" onclick="opentab('education')">Education</div>
-  </section>
+  <main>
+    <section id="home" class="section active">
+      <h2>Hi, I'm Rohith Daram</h2>
+      <p>Aspiring Data Analyst & Web Developer based in Hyderabad, India.</p>
+    </section>
 
-  <section id="about" class="tab-contents active-tab">
-    <div class="card">
+    <section id="about" class="section">
       <h2>About Me</h2>
-      <p>I'm Rohith Daram, a Data Analyst and Web Developer with experience in Python, SQL, Machine Learning, and Computer Vision. I enjoy building real-world solutions, including AI models and full-stack apps.</p>
-    </div>
-  </section>
+      <p>Aspiring Data Analyst and Web Developer with strong foundational skills in Python, SQL, web development, and machine learning. Experienced in real-world projects involving AI, computer vision, and full-stack development. Passionate about building impactful, data-driven solutions and continuously learning new technologies.</p>
+    </section>
 
-  <section id="projects" class="tab-contents">
-    <div class="card">
-      <h2>Deepfake Detection</h2>
-      <p>Developed a CNN-based model that detects deepfake videos using frame analysis and face embeddings.</p>
-    </div>
-    <div class="card">
-      <h2>Gun Detection System</h2>
-      <p>Real-time weapon detection system using YOLOv5 and OpenCV for surveillance footage analysis.</p>
-    </div>
-    <div class="card">
-      <h2>Eye-Controlled Mouse</h2>
-      <p>Built a tool that moves the cursor and clicks using only eye movement, leveraging MediaPipe and Dlib.</p>
-    </div>
-  </section>
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python, Java, C, SQL</li>
+        <li>HTML, CSS, JavaScript, React.js, Node.js, REST API, Tailwind CSS</li>
+        <li>SQL, MongoDB</li>
+        <li>Flask, Git, GitHub, Postman, VS Code</li>
+        <li>AI/ML (Basic), Cybersecurity, Problem Solving, Communication</li>
+      </ul>
+    </section>
 
-  <section id="education" class="tab-contents">
-    <div class="card">
-      <h2>Computer Science Engineering</h2>
-      <p>Currently pursuing B.Tech in CSE with strong academic record and hands-on projects in AI and Web Development.</p>
-    </div>
-  </section>
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="proj">
+        <h3>Deepfake Video Detection Web-App</h3>
+        <p>Python, ResNeXt, LSTM, Flask, React.js</p>
+      </div>
+      <div class="proj">
+        <h3>Gun Detection – AI-Based Weapon System</h3>
+        <p>Python, YOLOv5, OpenCV</p>
+      </div>
+      <div class="proj">
+        <h3>Eye Mouse – Eye-Controlled Cursor</h3>
+        <p>Python, Dlib, OpenCV</p>
+      </div>
+      <div class="proj">
+        <h3>NFC Business Card Writer</h3>
+        <p>React Native, JavaScript, NFC</p>
+      </div>
+    </section>
 
-  <footer>
-    <p>Connect with me: 
-      <a href="https://www.linkedin.com/in/rohithdaram" target="_blank">LinkedIn</a>
-      <a href="https://github.com/rohithdaram" target="_blank">GitHub</a>
-    </p>
-  </footer>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:rohithdaram10@gmail.com">rohithdaram10@gmail.com</a></p>
+      <p>Phone: +91-6303063205</p>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
