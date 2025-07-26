@@ -2,222 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rohith Daram | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <style>
-    /* RESET & BASE */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    a { text-decoration: none; color: inherit; }
-
-    /* SIDEBAR */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 260px;
-      height: 100vh;
-      background: #111;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 2rem 1.5rem;
-      transition: width 0.3s;
-    }
-    .sidebar .profile {
-      text-align: center;
-    }
-    .sidebar .profile h1 {
-      font-size: 2rem;
-      line-height: 1.2;
-    }
-    .sidebar .profile h1 span {
-      color: #00e1ff;
-    }
-    .sidebar .profile p {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-      color: #bbb;
-    }
-    .sidebar nav ul {
-      list-style: none;
-      margin-top: 2rem;
-    }
-    .sidebar nav ul li {
-      margin: 1.2rem 0;
-    }
-    .sidebar nav ul li a {
-      display: block;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      font-weight: 500;
-      transition: background 0.3s, color 0.3s;
-    }
-    .sidebar nav ul li a.active,
-    .sidebar nav ul li a:hover {
-      background: #00e1ff;
-      color: #000;
-    }
-    .sidebar .resume a {
-      display: block;
-      background: #00e1ff;
-      color: #000;
-      text-align: center;
-      padding: 0.7rem;
-      border-radius: 4px;
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
-    .sidebar .social a {
-      display: inline-block;
-      margin-right: 1rem;
-      font-size: 1rem;
-      color: #bbb;
-      transition: color 0.3s;
-    }
-    .sidebar .social a:hover {
-      color: #00e1ff;
-    }
-
-    /* MAIN */
-    main {
-      margin-left: 260px;
-      padding: 3rem 2rem;
-      transition: margin-left 0.3s;
-    }
-    section {
-      min-height: 100vh;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 0.8s forwards;
-    }
-    section.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    @keyframes fadeIn {
-      to { opacity: 1; transform: translateY(0); }
-    }
-    h2 {
-      font-size: 2rem;
-      color: #00e1ff;
-      margin-bottom: 1rem;
-      border-left: 4px solid #00e1ff;
-      padding-left: 0.8rem;
-    }
-    ul {
-      list-style: disc inside;
-      margin-top: 1rem;
-    }
-    ul li {
-      margin-bottom: 0.8rem;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .sidebar { width: 100%; height: auto; flex-direction: row; align-items: center; padding: 1rem; }
-      .sidebar nav ul { display: flex; gap: 1rem; margin: 0; }
-      .sidebar .profile { flex: 1; }
-      main { margin: 0; padding-top: 2rem; }
-      section { padding: 2rem; }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rohith Daram Portfolio</title>
+  <!-- Google Fonts and Font Awesome for icons -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <aside class="sidebar">
-    <div>
-      <div class="profile">
-        <h1>Rohith<br /><span>Daram</span></h1>
-        <p>Data Analyst & Web Developer</p>
+
+  <!-- Sidebar Navigation (fixed on right) -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <div class="profile-image">
+        <img src="images/profile.jpg" alt="Profile Picture">
       </div>
-      <nav>
-        <ul>
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <h1>Rohith Daram</h1>
+      <p>Software Engineer</p>
+      <a href="resume.pdf" class="btn" download>Download Resume</a>
     </div>
-    <div>
-      <div class="resume">
-        <a href="resume.pdf" download>Download Resume</a>
-      </div>
-      <div class="social">
-        <a href="https://linkedin.com/in/rohith-daram" target="_blank">LinkedIn</a>
-        <a href="https://github.com/drohith10" target="_blank">GitHub</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="images/about.jpg" alt="About Image" class="about-image">
+      <div class="about-text">
+        <p>Rohith Daram is a dedicated software engineer based in Hyderabad, India, with a passion for developing innovative solutions. He has experience in machine learning, computer vision, and embedded systems. Rohith enjoys tackling challenging problems and continually learning new technologies to stay at the forefront of the field.</p>
       </div>
     </div>
-  </aside>
+  </section>
 
-  <main>
-    <section id="home" class="active">
-      <h2>Welcome</h2>
-      <p>Hi, I'm Rohith Daram—a passionate Data Analyst and Web Developer from Hyderabad, India.</p>
-    </section>
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <img src="images/python.png" alt="Python">
+        <span>Python</span>
+      </div>
+      <div class="skill-item">
+        <img src="images/sql.png" alt="SQL">
+        <span>SQL</span>
+      </div>
+      <div class="skill-item">
+        <img src="images/java.png" alt="Java">
+        <span>Java</span>
+      </div>
+      <div class="skill-item">
+        <img src="images/html.png" alt="HTML">
+        <span>HTML</span>
+      </div>
+      <div class="skill-item">
+        <img src="images/css.png" alt="CSS">
+        <span>CSS</span>
+      </div>
+      <div class="skill-item">
+        <img src="images/js.png" alt="JavaScript">
+        <span>JavaScript</span>
+      </div>
+      <div class="skill-item">
+        <img src="images/react.png" alt="React">
+        <span>React</span>
+      </div>
+      <div class="skill-item">
+        <img src="images/mongodb.png" alt="MongoDB">
+        <span>MongoDB</span>
+      </div>
+      <div class="skill-item">
+        <img src="images/flask.png" alt="Flask">
+        <span>Flask</span>
+      </div>
+      <div class="skill-item">
+        <img src="images/git.png" alt="Git">
+        <span>Git</span>
+      </div>
+      <div class="skill-item">
+        <img src="images/postman.png" alt="Postman">
+        <span>Postman</span>
+      </div>
+      <!-- Add more skill items as needed -->
+    </div>
+  </section>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Aspiring Data Analyst and Web Developer with strong foundational skills in Python, SQL, web development, and machine learning. Experienced in real-world projects involving AI, computer vision, and full-stack development. Passionate about building impactful, data-driven solutions and continuously learning new technologies.</p>
-    </section>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project">
+        <img src="images/deepfake.jpg" alt="Deepfake Video Detection">
+        <h3>Deepfake Video Detection</h3>
+        <p>A machine learning project that analyzes video content to detect deepfake manipulations, helping to ensure content authenticity and security.</p>
+      </div>
+      <div class="project">
+        <img src="images/gun.jpg" alt="Gun Detection">
+        <h3>Gun Detection</h3>
+        <p>Real-time object detection system built with computer vision to identify firearms in video feeds, useful for surveillance and security applications.</p>
+      </div>
+      <div class="project">
+        <img src="images/eye_mouse.jpg" alt="Eye Mouse">
+        <h3>Eye Mouse</h3>
+        <p>An accessibility tool that uses eye-tracking to control the mouse cursor, enabling hands-free computing for users with mobility impairments.</p>
+      </div>
+      <div class="project">
+        <img src="images/nfc_card.jpg" alt="NFC Business Card Writer">
+        <h3>NFC Business Card Writer</h3>
+        <p>A hardware/software solution that writes and shares a digital business card via NFC tags, allowing quick data exchange with a tap of a smartphone.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Languages: Python, Java, C, SQL</li>
-        <li>Web: HTML, CSS, JavaScript, React.js, Node.js, REST API, Tailwind CSS</li>
-        <li>Databases: SQL, MongoDB</li>
-        <li>Tools/Frameworks: Flask, Git, GitHub, Postman, VS Code</li>
-        <li>Other: AI/ML (Basic), Cybersecurity, Problem Solving, Communication</li>
-      </ul>
-    </section>
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+      <li>Cisco Certified Network Associate (CCNA)</li>
+      <li>Oracle Certified Java Programmer</li>
+      <li>CDAC Post Graduate Diploma in Advanced Computing</li>
+      <!-- Add more certifications if available -->
+    </ul>
+  </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Deepfake Video Detection Web-App</strong> – Python, ResNeXt, LSTM, Flask, React.js</li>
-        <li><strong>Gun Detection AI</strong> – Python, YOLOv5, OpenCV</li>
-        <li><strong>Eye-Controlled Cursor System</strong> – Python, Dlib, OpenCV</li>
-        <li><strong>NFC Business Card Writer</strong> – React Native, JavaScript, NFC</li>
-      </ul>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:rohithdaram10@gmail.com">rohithdaram10@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i> +91-6303063205</p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/rohith-daram" target="_blank">linkedin.com/in/rohith-daram</a></p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/drohith10" target="_blank">github.com/drohith10</a></p>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:rohithdaram10@gmail.com">rohithdaram10@gmail.com</a></p>
-      <p>Phone: +91-6303063205</p>
-    </section>
-  </main>
-
-  <script>
-    // Smooth scroll & section activation
-    const links = document.querySelectorAll('.sidebar nav a');
-    const sections = document.querySelectorAll('main section');
-
-    links.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        links.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-        const target = document.getElementById(link.getAttribute('href').substring(1));
-        sections.forEach(sec => sec.classList.remove('active'));
-        target.classList.add('active');
-      });
-    });
-
-    // On load, ensure Home is active
-    window.addEventListener('DOMContentLoaded', () => {
-      document.querySelector('.sidebar nav a.active').click();
-    });
-  </script>
+  <!-- Particles.js library (for animated background) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/1.0.0/particles.min.js"></script>
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
